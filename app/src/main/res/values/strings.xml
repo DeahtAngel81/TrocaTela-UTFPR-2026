@@ -6,5 +6,6 @@
     <string name="Valor">Valor:</string>
     <string name="confirmar">Confirmar</string>
     <string name="listar">Listar</string>
+    <string name="enviar_sms">Enviar SMS</string>
 
 </resources>
