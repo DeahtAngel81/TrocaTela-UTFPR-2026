@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lvBebidas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <Button
-        android:id="@+id/btnProd1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Produto 1 (Cod: 101)"
-        android:onClick="onItemClick"
-        android:tag="101" />
-
-    <Button
-        android:id="@+id/btnProd2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Produto 2 (Cod: 102)"
-        android:onClick="onItemClick"
-        android:tag="102" />
-
-    <Button
-        android:id="@+id/btnProd3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Produto 3 (Cod: 103)"
-        android:onClick="onItemClick"
-        android:tag="103" />
-
-</LinearLayout>
+    android:entries="@array/bebidas"
+    tools:context=".ListarActivity">
+</ListView>

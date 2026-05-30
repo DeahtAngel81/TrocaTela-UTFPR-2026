@@ -22,7 +22,7 @@ class LancamentoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_lacamento)
+        setContentView(R.layout.activity_lancamento)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -34,28 +34,29 @@ class LancamentoActivity : AppCompatActivity() {
         etValor = findViewById(R.id.etValor)
     }
 
-
     fun btConfirmarOnClick(view: View) {
         val intent = Intent(this, ConfirmarActivity::class.java)
-            intent.putExtra("cod", etCod.text.toString())
-            intent.putExtra("qtd", etQtd.text.toString())
-            intent.putExtra("valor", etValor.text.toString())
-
+        intent.putExtra("cod", etCod.text.toString())
+        intent.putExtra("qtd", etQtd.text.toString())
+        intent.putExtra("valor", etValor.text.toString())
         startActivity(intent)
     }
+
     fun btListarOnClick(view: View) {
-        val intent = Intent( this, ListarActivity::class.java )
-        getResult.launch( intent )
+        val intent = Intent(this, ListarActivity::class.java)
+        getResult.launch(intent)
     }
 
     private val getResult = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult() ) { retorno ->
+        ActivityResultContracts.StartActivityForResult()
+    ) { retorno ->
 
-        if ( retorno.resultCode == RESULT_OK ) {
-            val cod = retorno.data?.getIntExtra( "codigo", 0 )
-            etCod.setText( cod.toString() )
+        if (retorno.resultCode == RESULT_OK) {
+            val cod = retorno.data?.getIntExtra("cod", 0)
+            etCod.setText(cod.toString())
         }
 
     }
+
 
 }
