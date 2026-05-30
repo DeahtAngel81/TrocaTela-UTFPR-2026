@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun btLancamentoOnClick(view: View) {
-        val intent = Intent(this, LacamentoActivity::class.java)
+        val intent = Intent(this, LancamentoActivity::class.java)
         startActivity(intent)
 
     }

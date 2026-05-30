@@ -15,7 +15,10 @@
             android:name=".ConfirmarActivity"
             android:exported="false" />
         <activity
-            android:name=".LacamentoActivity"
+            android:name=".LancamentoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListarActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
